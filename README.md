@@ -1,7 +1,6 @@
 #Dataset
 For dataset, Enron-Spam datasets is selected. There are actually six groups of Enron-spam datasets, and each of them has different spam-ham ratio. We can use them to perform sufficient experiment. In this report, we mainly used the first dataset of Enron-spam, in which there are 3672 legitimate emails and 1500 spam emails, and the ratio is around 1:3.
 
-<br />
 #Naïve Bayes Classifier
 ###Feature selection
 For text material, the words are the features obviously. Each word corresponds to one feature. The question is which feature to select and which not. From these the current researches, there are two approaches basically. One is to select all the appearing words; the other is select part of them.
@@ -19,9 +18,8 @@ From experiment, the time and space it takes for the first approach is acceptabl
 5. we can compute the likelihood by “num_ham” and “num_spam”.    The likelihood of the word being spam = num_spam / (num_ham + num_spam). The corresponding way for the likelihood of it being ham. 
 6. Finally, we can compute the possibility of the whole email being spam or ham by multiple prior and the likelihood of all the words in it. If the possibility of it being spam is greater, we believe it’s a spam, or ham.
 ###Experiment
-**Accuracy: **`91.14%`
+*Accuracy: *`91.14%`
 
-<br />
 #KNN Classifier
 ###Feature selection
 For the KNN classifier, we also select all the words as the feature. However, I did some improvement when compute the K Nearest Neighbors.
@@ -47,9 +45,8 @@ Where A is the number of terms in email I, B is the number of terms in email B, 
 4. For the K nearest neighbors, classify the email as the class which has the most number of neighbors.
 
 ###Experiment
-**Accuracy: **`82.14%` (when K=11)
+*Accuracy: *`82.14%` (when K=11)
 
-<br />
 #SVM Classifier
 ###Feature selection
 Support Vector is a vector of numbers, rather than text string. So, the first thing we need to do is to represent the text using numbers. As usual, we can create a dictionary to record all the words appeared. However, since the dictionary can be very large, which means the vector can be very long, we have to improve it.
@@ -63,4 +60,4 @@ So, in my experiment, we can just select the most frequent words. In detail, we 
 5. Use SVM to process this training email and get a model. Use this model to classify the testing emails.
 
 ###Experiment
-**Accuracy: **`96.30%` (when N = 1000)
+*Accuracy: *`96.30%` (when N = 1000)
