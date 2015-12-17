@@ -19,7 +19,7 @@ From experiment, the time and space it takes for the first approach is acceptabl
 6. Finally, we can compute the possibility of the whole email being spam or ham by multiple prior and the likelihood of all the words in it. If the possibility of it being spam is greater, we believe it’s a spam, or ham.
 
 ###Experiment
-_Accuracy: _`91.14%`
+Accuracy: `91.14%`
 
 #KNN Classifier
 ###Feature selection
@@ -46,7 +46,7 @@ Where A is the number of terms in email I, B is the number of terms in email B, 
 4. For the K nearest neighbors, classify the email as the class which has the most number of neighbors.
 
 ###Experiment
-_Accuracy: _`82.14%` (when K=11)
+Accuracy: `82.14%` (when K=11)
 
 #SVM Classifier
 ###Feature selection
@@ -61,4 +61,4 @@ So, in my experiment, we can just select the most frequent words. In detail, we 
 5. Use SVM to process this training email and get a model. Use this model to classify the testing emails.
 
 ###Experiment
-_Accuracy: _`96.30%` (when N = 1000)
+Accuracy: `96.30%` (when N = 1000)
